@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block branding %}
+    <h1>
+        <a href="{% url 'admin:index' %}" >
+            <img src = "{% static 'img/djang_python.jpg'%}" alt="djang_python.jpg" width="100px">
+        </a>
+    </h1>
+
+{% endblock %}
+

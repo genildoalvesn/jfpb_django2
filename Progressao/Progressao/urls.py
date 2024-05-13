@@ -21,3 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('paginas.urls')), # include faz a junção de todas as urls do sistemas
 ] + static( 'settings.STATIC_URL', document_root = 'settings.STATIC_ROOT')
+
