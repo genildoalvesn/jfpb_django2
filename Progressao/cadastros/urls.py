@@ -1,7 +1,8 @@
 from django.urls import path
 from django.contrib import admin
-from .views import IndexView
-from .views import  PaginaInicial, SobreView
+
+from Progressao.paginas.views import PaginaInicial, SobreView, IndexView
+
 urlpatterns = [
     path('modelo/', PaginaInicial.as_view(), name='modelo'),
     path('sobre/', SobreView.as_view(), name='sobre'),

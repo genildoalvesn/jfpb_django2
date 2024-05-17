@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
+<img src="/static/img/logo.jfpb.jpg" class="card-img-top" alt="..." style="width: 10%; height: auto;">
 {% block menu %}
-<div class="bg-dark">
-     <p style="color: white;">Código do menu</p>
+<div class="bg-dark text-center">
+     <p style="color: white;">Justiça Federal da Paraiba</p>
 </div>
 {% endblock %}
-
+    <div class="d-inline p-0 bg-primary text-white">Inicio</div>
+    <div class="d-inline p-0 bg-success text-white">Almoxarifado</div>
+    <div class="d-inline p-0 bg-primary text-white">Processos</div>
+    <div class="d-inline p-0 bg-success text-white">Transportes</div>
+   <div class="d-inline p-0 bg-danger text-white" href="{% url 'sobre'%}">sobre</div>
 {% block destaque %}
 <div class="bg-secondary">
     Figuras destaque
