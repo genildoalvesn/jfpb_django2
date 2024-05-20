@@ -16,11 +16,12 @@
      <p style="color: white;">Justiça Federal da Paraiba</p>
 </div>
 {% endblock %}
-    <div class="d-inline p-0 bg-primary text-white">Inicio</div>
-    <div class="d-inline p-0 bg-success text-white">Almoxarifado</div>
-    <div class="d-inline p-0 bg-primary text-white">Processos</div>
-    <div class="d-inline p-0 bg-success text-white">Transportes</div>
-   <div class="d-inline p-0 bg-danger text-white" href="{% url 'sobre'%}">sobre</div>
+
+    <a class="btn bg-success" href="{% url 'modelo' %}">Inicio</a>
+    <a class="btn bg-primary">Almoxarifado</a>
+    <a class="btn bg-success" >Processos</a>
+    <a class="btn bg-danger" href="{% url 'sobre' %}">Sobre</a>
+
 {% block destaque %}
 <div class="bg-secondary">
     Figuras destaque
