@@ -18,8 +18,8 @@
 {% endblock %}
 
     <a class="btn bg-success" href="{% url 'modelo' %}">Inicio</a>
-    <a class="btn bg-primary">Almoxarifado</a>
-    <a class="btn bg-success" >Processos</a>
+    <a class="btn bg-primary" href="{% url 'cadastrar-atividade' %}">Cadastrar</a>
+    <a class="btn bg-success" href="{% url 'cadastrar-campo' %}">Campo</a>
     <a class="btn bg-danger" href="{% url 'sobre' %}">Sobre</a>
 
 {% block destaque %}
