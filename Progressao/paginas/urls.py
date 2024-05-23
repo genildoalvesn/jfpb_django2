@@ -6,5 +6,5 @@ urlpatterns = [
     path('modelo/', PaginaInicial.as_view(), name='modelo'),
     path('sobre/', SobreView.as_view(), name='sobre'),
     path('admin/', admin.site.urls),
-    path('', IndexView.as_view(), name='inicio'),
+    path('index/', IndexView.as_view(), name='inicio'),
 ]
