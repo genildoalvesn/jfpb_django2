@@ -5,7 +5,11 @@ from .views import CampoCreate, AtividadeCreate
 from .views import CampoUpdate, AtividadeUpdate
 from .views import CampoDelete, AtividadeDelete
 from .views import CampoList, AtividadeList
-from Progressao.paginas.views import PaginaInicial, SobreView, IndexView
+from .views import PaginaInicial, SobreView, IndexView
+
+
+
+
 
 
 urlpatterns = [

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from .models import Campo, Atividade
@@ -45,3 +46,13 @@ class CampoList(ListView):
 class AtividadeList(ListView):
     model = Atividade
     template_name = 'cadastros/listas/atividade.html'
+
+
+class PaginaInicial(TemplateView):
+    template_name = 'modelo.html'
+
+class SobreView(TemplateView):
+    template_name ='sobre.html'
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
