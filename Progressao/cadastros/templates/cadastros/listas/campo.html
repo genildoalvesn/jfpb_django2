@@ -3,5 +3,31 @@
 {% load static %}
 
 {% block Conteudo %}
-    <h3>Lista de campos Registrados </h3>
+    <h3> Lista de campos Registrados </h3>
+    <hr>
+<div class="table-responsive">
+    <table class="table table-striped">
+    <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descricao</th>
+            /<th>Opções</th>
+    </tr>
+        {% for campo in object_list %}
+        <tr>
+            <th>{{campo.pk}</th>
+            <th>{{campo.nome}}</th>
+            <th>{{campo.descricao}}</th>
+             <th>
+                    Editar
+                    Excluir
+             </th>
+        </tr>
+        {% empty %}
+        <tr>
+        <td colspan="3"> Nemhum campo registrado </td>
+        </tr>
+        {% endfor %}
+   </table>
+</div>
 {% endblock %}
