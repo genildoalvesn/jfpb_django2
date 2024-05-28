@@ -5,13 +5,14 @@
 {% block Conteudo %}
     <h3> Lista de campos Registrados </h3>
     <hr>
+<a href="{% url 'cadastrar-campo' %}" class=" btn btn-primary btn-sm">Adicionar</a>
 <div class="table-responsive">
     <table class="table table-striped">
     <tr>
             <th>ID</th>
             <th>Nome</th>
             <th>Descricao</th>
-            /<th>Opções</th>
+            <th>Opções</th>
     </tr>
         {% for campo in object_list %}
         <tr>
