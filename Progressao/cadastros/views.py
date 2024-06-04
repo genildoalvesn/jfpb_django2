@@ -8,12 +8,12 @@ from django.urls import reverse_lazy
 class CampoCreate(CreateView):
     model = Campo
     fields = ['name', 'descricao']
-    template_name = 'cadastros/form.html'
+    template_name = 'cadastros/cadastrar.html'
     success_url = reverse_lazy('list-campos')
 class AtividadeCreate(CreateView):
     model = Atividade
     fields = ['numero','descricao', 'pontos', 'detalhes', 'campo']
-    template_name = 'cadastros/form.html'
+    template_name = 'cadastros/cadastrar.html'
     success_url = reverse_lazy('list-atividade')
 
 #################  UPDATE ####################
@@ -21,12 +21,12 @@ class AtividadeCreate(CreateView):
 class CampoUpdate(UpdateView):
     model = Campo
     fields = ['nome','descricao']
-    template_name = 'cadastros/form.html'
+    template_name = 'cadastros/cadastrar.html'
     success_url = reverse_lazy('list-campo')
 class AtividadeUpdate(UpdateView):
     model = Atividade
     fields = ['numero', 'descricao','pontos','detalhes','campo']
-    template_name = 'cadastros/form.html'
+    template_name = 'cadastros/cadastrar.html'
     success_url = reverse_lazy('list-atividade')
     ################### Delete ##################################
 class CampoDelete(DeleteView):
@@ -46,7 +46,6 @@ class CampoList(ListView):
 class AtividadeList(ListView):
     model = Atividade
     template_name = 'cadastros/listas/listar-atividade.html'
-
 
 class PaginaInicial(TemplateView):
     template_name = 'modelo.html'

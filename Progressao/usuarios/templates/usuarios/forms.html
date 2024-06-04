@@ -3,13 +3,11 @@
 {% load static %}
 
 {% block Conteudo %}
-<h3> Cadastro </h3>
-
 <form action ="" method="POST">
 
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-warning">Cadastrar</button>
+
+    <button type="submit" class="btn btn-warning">Entrar</button>
 
 </form>
 {% endblock %}

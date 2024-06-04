@@ -19,7 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('',include('cadastros.urls')),
-] + static( 'settings.STATIC_URL', document_root = 'settings.STATIC_ROOT')
+    path('', include('paginas.urls')),
+    path('', include('cadastros.urls')),
+    path('', include('usuarios.urls')),
+]+ static( 'settings.STATIC_URL', document_root = 'settings.STATIC_ROOT')
 
