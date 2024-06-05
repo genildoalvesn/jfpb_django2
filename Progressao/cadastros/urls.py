@@ -16,12 +16,16 @@ urlpatterns = [
 
     path('editar/atividade/<int:pk>/', AtividadeUpdate.as_view(), name="editar-atividade"),
     path('editar/campo/<int:pk>/', CampoUpdate.as_view(), name="editar-campo"),
+
     path('excluir/atividade/<int:pk>/', AtividadeDelete.as_view(),name="excluir-atividade"),
     path('excluir/campo/<int:pk>/', CampoDelete.as_view(),name="excluir-campo"),
+
     path('list/atividade/', AtividadeList.as_view(), name="list-atividade"),
     path('list/campo/', CampoList.as_view(), name="list-campo"),
+
     path('cadastrar/campo/', CampoCreate.as_view(), name="cadastrar-campo"),
     path('cadastrar/atividade/', AtividadeCreate.as_view(), name="cadastrar-atividade"),
+
     path('modelo/', PaginaInicial.as_view(), name="modelo"),
     path('sobre/', SobreView.as_view(), name="sobre"),
     path('admin/', admin.site.urls),

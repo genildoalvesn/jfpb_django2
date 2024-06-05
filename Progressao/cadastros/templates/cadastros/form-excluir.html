@@ -13,7 +13,9 @@
     Deseja excluir: <b>{{ object }}</b>
 </p>
     {% csrf_token %}
+
     {{ form.as_p }}
+
     <button type="submit" class="btn btn-danger">Excluir</button>
 </form>
 {% endblock %}
