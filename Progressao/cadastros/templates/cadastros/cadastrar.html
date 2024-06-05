@@ -2,15 +2,20 @@
 
 {% load static %}
 
-
 {% block Conteudo %}
+
 <h3> Cadastro </h3>
+<p class="lead">
+   Preencha todos os campos Obrigatorios.
+</p>
+<hr>
+<form action ="" method="POST"> <!-- Envia dados -->
 
-<form action ="" method="POST">
+    {% csrf_token %} <!-- Certificado de segurança -->
 
-    {% csrf_token %}
-    {{ form|crispy }}
-    <button type="submit" class="btn btn-warning">Cadastrar</button>
+    {{ form.as_p }} <!-- Habilita o forms -->
 
+    <button type="submit" class="btn btn-warning">Salvar</button>
+                    <!-- botão para confirmar -->
 </form>
 {% endblock %}
