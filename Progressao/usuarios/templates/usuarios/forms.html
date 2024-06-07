@@ -2,14 +2,24 @@
 
 {% load static %}
 
+{% block destaque %}
+
+{% endblock %}
+
 {% block Conteudo %}
-<h3> Autenticação </h3>
 
-<form action ="" method="POST">
+<div class="row">
+    <div class="col-md-2 mx-auto">
+        <h5> Autenticação </h5>
+        <form action ="" method="POST">
+             {% csrf_token %}
+             {{ form.as_p }}
+             <button type="submit" class="btn btn-warning" style="font-size: 12px; padding: 5px 10px;">Entrar</button>
 
-    {% csrf_token %}
-     {{ form.as_p }}
-    <button type="submit" class="btn btn-warning">Entrar</button>
+          </form>
 
-</form>
+    </div>
+
+
+</div>
 {% endblock %}

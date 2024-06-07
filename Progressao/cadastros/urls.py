@@ -6,10 +6,7 @@ from .views import CampoUpdate, AtividadeUpdate
 from .views import CampoDelete, AtividadeDelete
 from .views import CampoList, AtividadeList
 from .views import PaginaInicial, SobreView, IndexView
-
-
-
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 urlpatterns = [
