@@ -53,7 +53,8 @@ class AtividadeList(ListView):
     model = Atividade
     template_name = 'cadastros/listas/listar-atividade.html'
 
-class PaginaInicial(TemplateView):
+class PaginaInicial(LoginRequiredMixin,TemplateView):
+    login_url = reverse_lazy('login')
     template_name = 'modelo.html'
 
 class SobreView(TemplateView):
