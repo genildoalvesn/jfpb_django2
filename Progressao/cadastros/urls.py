@@ -27,6 +27,9 @@ urlpatterns = [
     path('sobre/', SobreView.as_view(), name="sobre"),
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name="inicio"),
+    ###################################################################################
 
+    path('editar/atividade/<int:pk>/', AtividadeUpdate.as_view(), name="editar-atividade"),
+    path('progressao/', AtividadeList.as_view(), name='progressao-list'),
 
 ]
