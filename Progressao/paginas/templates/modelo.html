@@ -37,6 +37,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="{% url 'list-atividade' %}">Atividade</a>
                             <a class="dropdown-item" href="{% url 'list-campo' %}">Campo</a>
+                            <a class="dropdown-item" href="{% url 'cadastrar-progressao' %}">Progressao</a>
+
                         </div>
                     </li>
                     <li class="nav-item">
@@ -81,7 +83,7 @@
         <p>Rodapé</p>
     </div>
     {% endblock %}
-
+    <script src="{% static 'js/bootstrap.bundle.js.map' %}"></script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/popper.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>

@@ -30,10 +30,11 @@ class Classe(models.Model):
 
 class Progressao(models.Model):
     servidor = models.CharField(max_length=255)  # Assumindo que este campo está correto
-    classe = models.CharField(max_length=255)    # Assumindo que este campo está correto
+    classe = models.CharField(max_length=255)   # Assumindo que este campo está correto
     data_inicial = models.DateField()
     data_final = models.DateField(null=True, blank=True)
     observacao = models.CharField(max_length=255, verbose_name="Observação")
+    usuario = models.ForeignKey(User, on_delete=models.PROTECT)
 
     def __str__(self):
         return "{} -> {} | {} a {}".format(self.servidor, self.classe, self.data_inicial, self.data_final)

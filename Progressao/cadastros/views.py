@@ -20,6 +20,21 @@ class AtividadeCreate(LoginRequiredMixin,CreateView):
     template_name = 'cadastros/cadastrar.html'
     success_url = reverse_lazy('list-atividade')
 
+class ProgressaoCreate(CreateView):
+   ## login_url = reverse_lazy('login')
+    model = Progressao
+    fields = ['classe', 'data_inicial', 'data_final', 'observacao']
+    template_name ='cadastros/progressao.html'
+    success_url = reverse_lazy ()
+
+    def form_valid(self,form):
+
+        # antes do super não foi criado o objeto nem salvo no banco
+        form.instance.usuario = self.request.user
+        url = super().form_valid(form)
+        # Depois do super o objeto esta criado
+        return url
+
 #################  UPDATE ####################
 
 class CampoUpdate(LoginRequiredMixin,UpdateView):
@@ -66,20 +81,7 @@ class SobreView(LoginRequiredMixin,TemplateView):
     login_url = reverse_lazy('login')
     template_name ='sobre.html'
 
-class ProgressaoCreate(LoginRequiredMixin,CreateView):
-    login_url = reverse_lazy('login')
-    model = Progressao
-    fields = ['classe ' , 'data_inicial', 'data_final' , 'observação']
-    template_name ='cadastros/form.html'
-    success_url = reverse_lazy ('listar-atividade')
 
-    def form_valid(self,form):
-
-        # antes do super não foi criado o objeto nem salvo no banco
-        form.instance.usuario = self.request.user
-        url = super().form_valid(form)
-        # Depois do super o objeto esta criado
-        return url
 
 class IndexView(TemplateView):
         template_name = 'index.html'
